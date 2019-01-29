@@ -31,12 +31,12 @@ ctrl_c(){
 function _exterscan {
 	clear
 
-echo -e "\033[1;31m ███████╗██╗  ██╗████████╗███████╗██████╗ ███╗   ██╗ █████╗ ██╗         ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗     ███████╗ ██████╗ █████╗ ███╗   ██╗\033[0m"
-echo -e "\033[1;31m ██╔════╝╚██╗██╔╝╚══██╔══╝██╔════╝██╔══██╗████╗  ██║██╔══██╗██║         ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗████╗  ██║\033[0m"
-echo -e "\033[1;31m █████╗   ╚███╔╝    ██║   █████╗  ██████╔╝██╔██╗ ██║███████║██║         ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝    ███████╗██║     ███████║██╔██╗ ██║\033[0m"
-echo -e "\033[1;31m ██╔══╝   ██╔██╗    ██║   ██╔══╝  ██╔══██╗██║╚██╗██║██╔══██║██║         ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗    ╚════██║██║     ██╔══██║██║╚██╗██║\033[0m"
-echo -e "\033[1;31m ███████╗██╔╝ ██╗   ██║   ███████╗██║  ██║██║ ╚████║██║  ██║███████╗    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║    ███████║╚██████╗██║  ██║██║ ╚████║\033[0m"
-echo -e "\033[1;31m ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝    ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝\033[0m"  
+echo -e "\033[1;31m      ███████╗██╗  ██╗████████╗███████╗██████╗ ███╗   ██╗ █████╗ ██╗         ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗     ███████╗ ██████╗ █████╗ ███╗   ██╗\033[0m"
+echo -e "\033[1;31m      ██╔════╝╚██╗██╔╝╚══██╔══╝██╔════╝██╔══██╗████╗  ██║██╔══██╗██║         ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗████╗  ██║\033[0m"
+echo -e "\033[1;31m      █████╗   ╚███╔╝    ██║   █████╗  ██████╔╝██╔██╗ ██║███████║██║         ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝    ███████╗██║     ███████║██╔██╗ ██║\033[0m"
+echo -e "\033[1;31m      ██╔══╝   ██╔██╗    ██║   ██╔══╝  ██╔══██╗██║╚██╗██║██╔══██║██║         ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗    ╚════██║██║     ██╔══██║██║╚██╗██║\033[0m"
+echo -e "\033[1;31m      ███████╗██╔╝ ██╗   ██║   ███████╗██║  ██║██║ ╚████║██║  ██║███████╗    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║    ███████║╚██████╗██║  ██║██║ ╚████║\033[0m"
+echo -e "\033[1;31m      ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝    ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝\033[0m"  
 echo " "
 
 
@@ -186,84 +186,290 @@ echo " "
 
 
 function _CVE {
+	kill=0
+	while [[ $kill -eq 0 ]]; do
 		clear
-		echo -e '\033[37m  ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗     ██████╗██╗   ██╗███████╗ \033[0m'                                                                                                                                                                                                                                                                                                                                                                                                                                           
-        echo -e '\033[37m  ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝    ██╔════╝██║   ██║██╔════╝ \033[0m'                                                                                                                                                                                                                                                                                                                                                                                                                                           
-        echo -e '\033[37m  █████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗      ██║     ██║   ██║█████╗   \033[0m'                                                                                                                                                                                                                                                                                                                                                                                                                                           
-        echo -e '\033[37m  ██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝      ██║     ╚██╗ ██╔╝██╔══╝   \033[0m'                                                                                                                                                                                                                                                                                                                                                                                                                                           
-        echo -e '\033[37m  ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗    ╚██████╗ ╚████╔╝ ███████╗ \033[0m'                                                                                                                                                                                                                                                                                                                                                                                                                                           
-        echo -e '\033[37m  ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝     ╚═════╝  ╚═══╝  ╚══════╝ \033[0m'  
+		echo -e '\033[37m          ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗     ██████╗██╗   ██╗███████╗ \033[0m'                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        echo -e '\033[37m          ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝    ██╔════╝██║   ██║██╔════╝ \033[0m'                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        echo -e '\033[37m          █████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗      ██║     ██║   ██║█████╗   \033[0m'                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        echo -e '\033[37m          ██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝      ██║     ╚██╗ ██╔╝██╔══╝   \033[0m'                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        echo -e '\033[37m          ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗    ╚██████╗ ╚████╔╝ ███████╗ \033[0m'                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        echo -e '\033[37m          ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝     ╚═════╝  ╚═══╝  ╚══════╝ \033[0m'  
         echo " "
-	echo -e "\033[1;33m You can search for CVE deatils here by,entering a product name or any keyword(or a phrase) .[Ex: nikto] \033[0m "
-	echo -e "\033[1;33m if you enter a keyword, it will Display the CVE-ID's and then choose CVE-IDs to fetch details.\033[0m "
-	echo " "
+		echo -e "\033[1;33m           You can search for CVE deatils here by,entering a product name or any keyword(or a phrase) .[Ex: nikto] \033[0m "
+		echo -e "\033[1;33m           if you enter a keyword, it will Display the CVE-ID's and then choose CVE-IDs to fetch details.\033[0m "
+		echo " "
+		echo "         "
+		echo "         "	
+		p=$(echo -e "\033[1;4;37;40mSelect a Search:\033[0m")
+		s=$(echo "-----------------------------------------------")
+		PS3=" $p : "
 
-	while [[ 1 ]]; do
-
-	
-		echo -e "\033[1;31m enter a keyword or a phrase :\033[0m" 
-		read -p " " key
-		if [[ -n $key ]]; then
-			echo " "
-			echo " wait a second . . ."
-			cve=$(curl -s "https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=$key" |awk 'BEGIN{RS="<";FS=">"} /name=CVE/{print $2}')
-			if [[ -n $cve ]]; then
+		sona1=$(echo -e "\033[31mSearch by KEYWORD (or) a KEYWORD PHRASE.\033[0m")
+		sona2=$(echo -e "\033[31mSearch by CVE-ID.\033[0m")
+		quit=$(echo -e "\033[31mQuit or Exit\033[0m")
+        
+		select sonnas in "$sona1" "$sona2" "$quit"
+		do
+			case $sonnas in
+						$sona1) while [[ 1 ]]; do
+									echo -e "\033[1;31m enter a keyword or a phrase :\033[0m" 
+									read -p " " key
+									if [[ -n $key ]]; then
+										echo " "
+										clear
+										echo " "
+										echo -e "\033[1;37m wait for a second . . .\033[0m"
+										curl -s "https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=$key" |awk 'BEGIN{RS="<";FS=">"} /name=CVE/{print $2}' > cvelist.txt
+										cvelist=$(awk '{print $0}' cvelist.txt)
+										cve=$(awk 'BEGIN{OFS=". ";} {print NR,$0}' cvelist.txt)
+										if [[ -n $cve ]]; then
 #####>>>>>>>>>>>>                                   >>>>>>>>>>>>>>>>> fetching CVE ID <<<<<<<<<<<<<<<<<	
-				echo -e "\033[1;33m The CVE-ID's are: \033[0m" & curl -s "https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=$key" |awk 'BEGIN{RS="<";FS=">"} /name=CVE/{print $2}'     
-				day=$(date +"%d-%m-%y")
-				time=$(date +"%H-%M-%S")																					 #filtering a HTML page.                 
-				touch Explore-CVE_DATE:"$day"_TIME:"$time".log
-				echo "____________________________$key _________________________________" > Explore-CVE_DATE:"$day"_TIME:"$time".log
-				local plus=0
-				j=1
-				while [[ $plus == 0 ]]; do                                           							  #loop to get CVE details of user-Defined CVE.
-					echo -e "\033[1;31m Enter a CVE-ID from above list or of your own choice: :\033[0m" 
-					read -p " " ID
-					if [[ -n $ID ]]; then
-						echo -e "\033[1;31m $j.          \033[0m\033[1;33m $ID \033[0m"
-						echo " ">>Explore-CVE_DATE:"$day"_TIME:"$time".log
-						echo "-----------------------------------------------------------------------------------------------------------">>Explore-CVE_DATE:"$day"_TIME:"$time".log
-						echo -e "\033[1;33m--------------------------------------------------------------------------------------------------------------------------------------------- \033[0m "
-						json=$(curl -s "https://cve.circl.lu/api/cve/$ID" | jq '{Name :.id,Summary:.summary,Solution:.references}' |tee -a Explore-CVE_DATE:"$day"_TIME:"$time".log)
-																									  #fetching CVE details for a CVE ID
-						echo -e "\033[1;32m $json \033[0m"
-						((j++))
-						echo " "
-						echo " "
-						read -p "Want to search an another CVE-ID? (y/n):[n]" decision									  #getting user choice to cont with another CVE-ID.
-						if [[ $decision == "y" ]]; then 
-							plus=0
-						elif [[ $decision == "n" ]]; then
-							plus=1
-							break
-						else
-							plus=1
-							break
-						fi
-					fi
+											echo -e "\033[1;31m The CVE-ID's are: \033[0m" 
+											echo -e "\033[1;33m $cve \033[0m" 																					 #filtering a HTML page.                 
+											echo " "
+											echo " "
+											while [[ 1 ]]; do
+												echo -e "\033[1;32m SELECT A METHOD FROM BELOW\033[0m"
+												echo " "
+												echo -e "\033[1;31m         1. a specific CVE-ID.\033[0m"
+												echo -e "\033[1;31m         2. a certain Number of CVE-IDs from the list starting.\033[0m"
+												echo -e "\033[1;31m         3. all the CVE-IDs listed above.\033[0m"
+	                                        	echo -e "\033[1;31m         4. Exit or Quit \033[0m"								
+												echo " "
+												echo -e "\033[1;31mfetch CVE-Details for - \033[0m"
+												read -p "Enter an option number:" opt
+												if [[ $opt == 1 ]]; then
+													local plus=0
+													j=1
+													while [[ $plus == 0 ]]; do                                           							  #loop to get CVE details of user-Defined CVE.
+														echo -e "\033[1;31m Enter a CVE-ID from above list :\033[0m" 
+														read -p " " ID
+														day=$(date +"%d-%m-%y")
+														time=$(date +"%H-%M")
+														if [[ -n $ID ]]; then
+															echo -e "\033[1;31m $j.          \033[0m\033[1;33m $ID \033[0m"
+															echo " ">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+															echo "-----------------------------------------------------------------------------------------------------------">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+															echo -e "\033[1;33m--------------------------------------------------------------------------------------------------------------------------------------------- \033[0m "
+															json=$(curl -s "https://cve.circl.lu/api/cve/$ID" | jq '{Name :.id,Summary:.summary,Solution:.references}' |tee -a Explore-CVE_DATE:"$day"_TIME:"$time".log)
+																											  #fetching CVE details for a CVE ID
+															echo -e "\033[1;32m $json \033[0m"
+															((j++))
+															mv Explore-CVE_DATE:"$day"_TIME:"$time".log log_files
+															echo " "
+															echo " "
+															read -p "Want to search an another CVE-ID? (y/n):[n]" decision									  #getting user choice to cont with another CVE-ID.
+															if [[ $decision == "y" ]]; then 
+																plus=0
+															elif [[ $decision == "n" ]]; then
+																plus=1
+																break
+															else
+																plus=1
+																break
+															fi
+														else	
+															read -p "Continue? (y/n):[n]" decision1									  #getting user choice to cont with another CVE-ID.
+															if [[ $decision1 == "y" ]]; then 
+																echo " "
+															elif [[ $decision1 == "n" ]]; then
+																echo -e " \033[1;31m----------------------------------------------------------------------------                     ~~~~~~~~~~\033[0m\033[1;31m >>> END <<<\033[0m "
+																break
+															else
+																echo -e " \033[1;31m----------------------------------------------------------------------------                     ~~~~~~~~~~\033[0m\033[1;31m >>> END <<<\033[0m "
+																break
+															fi
+														fi
+													done
+											
 
-				done	
-				echo -e " \033[1;31m----------------------------------------------------------------------------                     ~~~~~~~~~~\033[0m "
-				echo "------------------------------------------------------>>>END<<<">> Explore-CVE_DATE:"$day"_TIME:"$time".log
+												elif [[ $opt == 2 ]]; then
+													tncve=$(awk 'END{print NR}' cvelist.txt)
+													read -p "Enter a maximum number upto which the CVE-Details are to be fetched-(within $tncve): " rangenum
+													if [[ -n $rangenum ]]; then
+														if [[ $rangenum -gt $tncve ]]; then
+															echo -e "\033[1;33m your choice exceeds the no of CVE-IDs: \033[0m"
+															read -p "Do you want to go with all CVE-IDs:(y/n)[n] " sel
+															if [[ $sel == 'y' ]]; then
+																day=$(date +"%d-%m-%y")
+																time=$(date +"%H")
+																j=1                                                                                        # j is the list of CVE's 
+																for i in $cvelist                                                                          #for loop, to send CVE-ID one-by-one to api.    
+																do
+																	echo -e "\033[1;31m $j.          \033[0m\033[1;33m $i \033[0m" 
+																	echo " ">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+																	echo " $j. ">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+																	echo "-----------------------------------------------------------------------------------------------------------">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+																	echo -e "\033[1;33m--------------------------------------------------------------------------------------------------------------------------------------------- \033[0m"
+																	json=$(curl -s "https://cve.circl.lu/api/cve/$i" | jq '{Name :.id,Summary:.summary,Solution:.references}' |tee -a Explore-CVE_DATE:"$day"_TIME:"$time".log)       
+																									#API to fetch the CVE Details.(name,summary,References or solution)
+																	echo -e "\033[1;32m $json \033[0m"
+																	((j++))																				
+																	echo " "
+																	echo " "
+																done 
+																mv Explore-CVE_DATE:"$day"_TIME:"$time".log log_files          
+															elif [[ $sel == 'n' ]]; then
+																echo " "
+																echo -e "\033[1;33m Enter within the limit. \033[0m"
+															else
+																echo " "
+													   			echo -e "\033[1;33m Enter within the limit. \033[0m"                                                     
+															fi
+														elif [[ $rangenum -lt $tncve ]]; then
+															j=0                 
+															day=$(date +"%d-%m-%y")
+															time=$(date +"%H")                                                                   # j is the list of CVE's 
+															for i in $cvelist                                                                            #for loop, to send CVE-ID one-by-one to api.    
+															do
+																if [[ $j -lt $rangenum ]]; then
+																	((j++))
+																	echo -e "\033[1;31m $j.          \033[0m\033[1;33m $i \033[0m" 
+																	echo " ">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+																	echo " $j. ">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+																	echo "-----------------------------------------------------------------------------------------------------------">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+																	echo -e "\033[1;33m--------------------------------------------------------------------------------------------------------------------------------------------- \033[0m"
+																	json=$(curl -s "https://cve.circl.lu/api/cve/$i" | jq '{Name :.id,Summary:.summary,Solution:.references}' |tee -a Explore-CVE_DATE:"$day"_TIME:"$time".log)       
+																									#API to fetch the CVE Details.(name,summary,References or solution)
+																	echo -e "\033[1;32m $json \033[0m"																				
+																	echo " "
+																	echo " "
+																fi
+															done
+															mv Explore-CVE_DATE:"$day"_TIME:"$time".log log_files
+														else
+															echo -e "\033[1;33m enter a valid value (in numbers). \033[0m"
+														
+														fi
+													else
+														 read -p "Do you want to exit(y/n):[n]" sel1
+													 	if [[ $sel1 == y ]]; then
+													 		echo " "
+													 	elif [[ $sel1 == n ]]; then
+													 		break
+													 	else
+													 		break	
+													 	fi
+													fi
+												elif [[ $opt == 3 ]]; then
+													j=1   
+													day=$(date +"%d-%m-%y")
+													time=$(date +"%H")                                                                                     # j is the list of CVE's 
+													for i in $cvelist                                                             #for loop, to send CVE-ID one-by-one to api.    
+													do
+														echo -e "\033[1;31m $j.          \033[0m\033[1;33m $i \033[0m" 
+														echo " ">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+														echo " $j. ">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+														echo "-----------------------------------------------------------------------------------------------------------">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+														echo -e "\033[1;33m--------------------------------------------------------------------------------------------------------------------------------------------- \033[0m"
+														json=$(curl -s "https://cve.circl.lu/api/cve/$i" | jq '{Name :.id,Summary:.summary,Solution:.references}' |tee -a Explore-CVE_DATE:"$day"_TIME:"$time".log)       
+																						#API to fetch the CVE Details.(name,summary,References or solution)
+														echo -e "\033[1;32m $json \033[0m"
+														((j++))																				
+														echo " "
+														echo " "
+													done
+													mv Explore-CVE_DATE:"$day"_TIME:"$time".log log_files
+												elif [[ $opt == 4 ]]; then
+														clear
+														break
+												else
+														echo -e "\033[1;33m Enter a valid option.  \033[0m"
+												fi
+											done
+											echo -e " \033[1;31m----------------------------------------------------------------------------                     ~~~~~~~~~~\033[0m "
+											echo "------------------------------------------------------>>>END<<<">> Explore-CVE_DATE:"$day"_TIME:"$time".log
+											mv Explore-CVE_DATE:"$day"_TIME:"$time".log log_files &>/dev/null
+										else 
+											echo -e "\033[1;33m Sorry,we dont find any CVE-ID's Related to your keyword.(╸▁╺) \033[0m " 
+											echo " "    
+										fi
+									else	
+										read -p "Continue search? (y/n):[n]" decision1									  #getting user choice to cont with another CVE-ID.
+										if [[ $decision1 == "y" ]]; then 
+											echo " "
+										elif [[ $decision1 == "n" ]]; then
+											echo -e " \033[1;31m----------------------------------------------------------------------------                     ~~~~~~~~~~\033[0m\033[1;31m >>> END <<<\033[0m "
+											clear
+											break
+										else
+											echo -e " \033[1;31m----------------------------------------------------------------------------                     ~~~~~~~~~~\033[0m\033[1;31m >>> END <<<\033[0m "
+											clear
+											break
+										fi
+									fi  
+								done
+								echo "------------------------------------------------------>>>END<<<">> Explore-CVE_DATE:"$day"_TIME:"$time".log
 		
-				mv Explore-CVE_DATE:"$day"_TIME:"$time".log log_files 
-			else 
-				echo -e "\033[1;33m Sorry,we dont find any CVE-ID's Related to your keyword.(╸▁╺) \033[0m " 
-				echo " "    
-			fi
+								mv Explore-CVE_DATE:"$day"_TIME:"$time".log log_files
+								break ;;
+
+						$sona2) local plus=0
+								j=1
+								while [[ $plus == 0 ]]; do                                           							  #loop to get CVE details of user-Defined CVE.
+									echo -e "\033[1;31m Enter a CVE-ID :\033[0m" 
+									read -p " " ID
+									if [[ -n $ID ]]; then
+										echo -e "\033[1;31m $j.          \033[0m\033[1;33m $ID \033[0m"
+										day=$(date +"%d-%m-%y")
+										time=$(date +"%H-%M-%S")																					 #filtering a HTML page.                 
+									   	touch Explore-CVE_DATE:"$day"_TIME:"$time".log
+										echo " ">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+										echo "-----------------------------------------------------------------------------------------------------------">>Explore-CVE_DATE:"$day"_TIME:"$time".log
+										echo -e "\033[1;33m--------------------------------------------------------------------------------------------------------------------------------------------- \033[0m "
+										json=$(curl -s "https://cve.circl.lu/api/cve/$ID" | jq '{Name :.id,Summary:.summary,Solution:.references}' |tee -a Explore-CVE_DATE:"$day"_TIME:"$time".log)
+																															  #fetching CVE details for a CVE ID
+										echo -e "\033[1;32m $json \033[0m"
+										((j++))
+										echo " "
+										echo " "
+										read -p "Want to search an another CVE-ID? (y/n):[n]" decision									  #getting user choice to cont with another CVE-ID.
+										echo " "
+										if [[ $decision == "y" ]]; then 
+											plus=0
+										elif [[ $decision == "n" ]]; then
+											plus=1
+											clear
+											break
+										else
+											plus=1
+											clear
+											break
+										fi
+									else 
+										echo -e "\033[1;33m Empty value detected./-_-\ \033[0m"
+										read -p "Want to try again? (y/n):[n]" decision									  #getting user choice to cont with another CVE-ID.
+										echo " "
+										if [[ $decision == "y" ]]; then 
+											echo " "
+											plus=0
+										elif [[ $decision == "n" ]]; then
+											plus=1
+											clear
+											break
+										else
+											plus=1
+											clear
+											break
+										fi
+									fi
+								done	
+								echo -e " \033[1;31m----------------------------------------------------------------------------                     ~~~~~~~~~~\033[0m "
+								echo "------------------------------------------------------>>>END<<<">> Explore-CVE_DATE:"$day"_TIME:"$time".log
 		
-		else	
-			read -p "Continue search? (y/n):[n]" decision1									  #getting user choice to cont with another CVE-ID.
-			if [[ $decision1 == "y" ]]; then 
-				echo " "
-			elif [[ $decision1 == "n" ]]; then
-				echo -e " \033[1;31m----------------------------------------------------------------------------                     ~~~~~~~~~~\033[0m\033[1;31m >>> END <<<\033[0m "
-				break
-			else
-				echo -e " \033[1;31m----------------------------------------------------------------------------                     ~~~~~~~~~~\033[0m\033[1;31m >>> END <<<\033[0m "
-				break
-			fi
-		fi   
+								mv Explore-CVE_DATE:"$day"_TIME:"$time".log log_files 
+								break ;;
+
+						$quit)  clear
+								kill=1
+								break ;;
+
+							*) optnum=$(echo -e "\033[5;30;47moption numbers\033[0m")
+								echo "enter the" $optnum "provided above."
+								break ;;
+			esac
+		done
 	done
 	rm -rf *.txt
 	rm -rf *.log
@@ -272,12 +478,12 @@ function _CVE {
 
 function _interscan {
 clear
-echo -e '\033[33m ██╗███╗   ██╗████████╗███████╗██████╗ ███╗   ██╗ █████╗ ██╗         ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗     ███████╗ ██████╗ █████╗ ███╗   ██╗ \033[0m'
-echo -e '\033[33m ██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗████╗  ██║██╔══██╗██║         ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗████╗  ██║ \033[0m'
-echo -e '\033[33m ██║██╔██╗ ██║   ██║   █████╗  ██████╔╝██╔██╗ ██║███████║██║         ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝    ███████╗██║     ███████║██╔██╗ ██║ \033[0m'
-echo -e '\033[33m ██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗██║╚██╗██║██╔══██║██║         ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗    ╚════██║██║     ██╔══██║██║╚██╗██║ \033[0m'
-echo -e '\033[33m ██║██║ ╚████║   ██║   ███████╗██║  ██║██║ ╚████║██║  ██║███████╗    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║    ███████║╚██████╗██║  ██║██║ ╚████║ \033[0m'
-echo -e '\033[33m ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝    ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝ \033[0m'
+echo -e '\033[33m       ██╗███╗   ██╗████████╗███████╗██████╗ ███╗   ██╗ █████╗ ██╗         ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗     ███████╗ ██████╗ █████╗ ███╗   ██╗ \033[0m'
+echo -e '\033[33m       ██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗████╗  ██║██╔══██╗██║         ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗████╗  ██║ \033[0m'
+echo -e '\033[33m       ██║██╔██╗ ██║   ██║   █████╗  ██████╔╝██╔██╗ ██║███████║██║         ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝    ███████╗██║     ███████║██╔██╗ ██║ \033[0m'
+echo -e '\033[33m       ██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗██║╚██╗██║██╔══██║██║         ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗    ╚════██║██║     ██╔══██║██║╚██╗██║ \033[0m'
+echo -e '\033[33m       ██║██║ ╚████║   ██║   ███████╗██║  ██║██║ ╚████║██║  ██║███████╗    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║    ███████║╚██████╗██║  ██║██║ ╚████║ \033[0m'
+echo -e '\033[33m       ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝    ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝ \033[0m'
 echo " "
 
 day=$(date +"%d-%m-%y")
@@ -306,26 +512,27 @@ else
       echo -e "\033[1;31m Your OS does not support this shell {~_~}. \033[0m"
 fi
 mkdir -p log_files
-clear
 #####>>>>>>>>>>>>>                                          >>>>>>>> starting Pronoxis <<<<<<<<< 
-
-echo -e '\033[37m                     ██████╗ ██████╗  ██████╗ ███╗   ██╗ ██████╗ \033[0m\033[31m██╗  ██╗\033[0m\033[37m██╗███████╗ \033[0m'
-echo -e '\033[37m                     ██╔══██╗██╔══██╗██╔═══██╗████╗  ██║██╔═══██╗\033[0m\033[31m╚██╗██╔╝\033[0m\033[37m██║██╔════╝ \033[0m'
-echo -e '\033[37m                     ██████╔╝██████╔╝██║   ██║██╔██╗ ██║██║   ██║\033[0m\033[31m ╚███╔╝ \033[0m\033[37m██║███████╗ \033[0m'
-echo -e '\033[37m                     ██╔═══╝ ██╔══██╗██║   ██║██║╚██╗██║██║   ██║\033[0m\033[31m ██╔██╗ \033[0m\033[37m██║╚════██║ \033[0m'
-echo -e '\033[37m                     ██║     ██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝\033[0m\033[31m██╔╝ ██╗\033[0m\033[37m██║███████║ \033[0m'
-echo -e '\033[37m                     ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ \033[0m\033[31m╚═╝  ╚═╝\033[0m\033[37m╚═╝╚══════╝ \033[0m'
-echo -e '\033[37m                                                                 \033[0m\033[31mSecurity\033[0m\033[37m at its Basic form \033[0m'
-echo " "
-echo -e '\033[37m                                              Developed by team heller$ \033[0m'''
-echo " "
-echo -e "                                                                                            \033[1;31m`timestamp`\033[0m"
-echo " "
-echo " "
-
 plus=0
+while [[ $plus -eq 0 ]]; do
+	clear
+	echo -e '\033[37m                     ██████╗ ██████╗  ██████╗ ███╗   ██╗ ██████╗ \033[0m\033[31m██╗  ██╗\033[0m\033[37m██╗███████╗ \033[0m'
+	echo -e '\033[37m                     ██╔══██╗██╔══██╗██╔═══██╗████╗  ██║██╔═══██╗\033[0m\033[31m╚██╗██╔╝\033[0m\033[37m██║██╔════╝ \033[0m'
+	echo -e '\033[37m                     ██████╔╝██████╔╝██║   ██║██╔██╗ ██║██║   ██║\033[0m\033[31m ╚███╔╝ \033[0m\033[37m██║███████╗ \033[0m'
+	echo -e '\033[37m                     ██╔═══╝ ██╔══██╗██║   ██║██║╚██╗██║██║   ██║\033[0m\033[31m ██╔██╗ \033[0m\033[37m██║╚════██║ \033[0m'
+	echo -e '\033[37m                     ██║     ██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝\033[0m\033[31m██╔╝ ██╗\033[0m\033[37m██║███████║ \033[0m'
+	echo -e '\033[37m                     ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ \033[0m\033[31m╚═╝  ╚═╝\033[0m\033[37m╚═╝╚══════╝ \033[0m'
+	echo -e '\033[37m                                                                 \033[0m\033[31mSecurity\033[0m\033[37m at its Basic form \033[0m'
+	echo " "
+	echo -e '\033[37m                                              Developed by team heller$ \033[0m'''
+	echo " "
+	echo -e "                                                                                            \033[1;31m`timestamp`\033[0m"
+	echo " "
+	echo " "
+
+# plus=0
 	
-	while [[ $plus -eq 0 ]]; do
+# 	while [[ $plus -eq 0 ]]; do
 		echo "         "
 		echo "         "	
 		p=$(echo -e "\033[1;4;37;40mSelect a Scan\033[0m")
