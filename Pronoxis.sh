@@ -39,32 +39,39 @@ echo -e "\033[1;31m      ███████╗██╔╝ ██╗   ██
 echo -e "\033[1;31m      ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝    ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝\033[0m"  
 echo " "
 
-
-	read -p "Enter an ip address or a Domain name:" ipadd                                #get an ip or url.
-	i=0
-	while [[ -z $ipadd ]]; do              												 #checking for the null values in ip adress field.
-			if [[ $i -eq 0 ]]; then  													 #repeat for once the wrong ip.
-				echo "the default option is Exit,if you dont enter an ip address it EXIT's"
-				i=1
+while [[ 1 ]]; do
+    read -p "Enter an ip address or a Domain name:" ipadd                           #get an ip or url.
+	if [[ -z $ipadd ]]; then              												 #checking for the null values in ip adress field.
+		read -p " Do you want to Exit?(y/n):[n] " dec
+			if [[ $dec == 'y' ]]; then
+				clear
+				exit
 			else
-				break
+				echo " "
 			fi
-	done
+	fi
 
-
-	if [[ -n $ipadd ]]; then                                                             #the condition when ip field is not empty.
-				ip=$(ping -c 1 $ipadd |grep 'bytes from' | awk 'BEGIN{RS=":"} NR==1{print $4}')     #to get ip from the url.
-				if fping -r 1 $ip                                                        #to check the ip is alive or not.
+	if [[ -n $ipadd ]]; then
+				if fping -r 1 $ipadd                                                        #to check the ip is alive or not.
 				then
+					ip=$(ping -c 1 $ipadd |grep 'bytes from' | awk 'BEGIN{RS=":"} NR==1{print $4}')
   					echo " "
-  					echo -e "\033[1;31m IP Validated \033[0m"
+  					echo -e "\033[1;31m IP Validated.The target IP-ADDRESS IS:\033[0m\033[1;33m $ip \033[0m"
+  					break
 
 				else
   					echo " "
  					echo -e "\033[1;31mEnter Valid ip Address\033[0m"
   					echo " "
-  					break
+  					read -p " Do you want to Exit?(y/n):[y] " dec
+					if [[ $dec == 'n' ]]; then
+						echo " "
+					else
+						exit
+					fi
 				fi
+	fi
+done
 		day=$(date +"%d-%m-%y")                                                          
 		time=$(date +"%H")
 		touch External_DATE:"$day"_TIME:"$time".log                                   #creates a file to save the logs of external server scan.
