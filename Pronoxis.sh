@@ -186,7 +186,6 @@ done
 		mv CVE-Details_DATE:"$day"_TIME:"$time".log log_files 2>/dev/null
 		rm temp.txt 2>/dev/null
 #####>>>>>>>>>>>>>                                 >>>>>>>>>>>>>>>>> all CVE is fetched <<<<<<<<<<<<<<<<<<<<<<<<
-	fi
 	rm -rf *.txt
 	rm -rf *.log
 }
